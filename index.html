@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Voronoi Tesselations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+    <script src="voronoi.js"></script>
+    <script src="viz.js"></script>
+</head>
+
+<body>
+    <div>
+        <button id='changeParty'>Change Party</button><span id='party'>Red</span>
+    </div>
+    <script>
+        $('#changeParty').click(() => {
+            console.log(party);
+            if (party == 'red') {
+                party = 'blue';
+                $('#party').html("<span id = 'party'>" + party + "</span>")
+            } else {
+                party = 'red';
+                $('#party').html("<span id = 'party'>" + party + "</span>")
+            }
+        })
+    </script>
+</body>
+
+</html>
